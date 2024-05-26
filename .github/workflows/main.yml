@@ -26,3 +26,4 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ec2-user@your-ec2-ip 'sudo systemctl restart apache2'
 
+
