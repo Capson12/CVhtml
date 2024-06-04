@@ -17,3 +17,7 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.3
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_2 }}
+
+      - name: Copy files to EC2
+        run: |
+          scp -r -o StrictHostKeyChecking=no ./* ec2-user@18.175.25.162:/var/www/html/
