@@ -20,4 +20,4 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          scp -r -o StrictHostKeyChecking=no ./* ec2-user@18.175.25.162:/var/www/html/
+          scp -r -o StrictHostKeyChecking=no ./* rj@10.12.1.20:/var/www/html/
