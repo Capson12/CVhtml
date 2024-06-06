@@ -20,7 +20,7 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          sudo scp -r -o StrictHostKeyChecking=no ./* ec2-user@18.175.25.162:/var/www/html/
+          scp -r -o StrictHostKeyChecking=no ./* ec2-user@18.175.25.162:/var/www/html/
 
       - name: Restart Web Server
         run: |
