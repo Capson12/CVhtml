@@ -21,9 +21,3 @@ jobs:
       - name: Copy files to EC2
         run: |
           scp -r -o StrictHostKeyChecking=no -i ~/nodeapp.pem ./* ec2-user@18.175.25.162:/var/www/html
-
-      - name: Restart Web Server
-        run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@18.175.25.162 'sudo systemctl restart httpd'
-
-
