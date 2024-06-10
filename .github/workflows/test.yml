@@ -20,4 +20,4 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          scp -r -o StrictHostKeyChecking=no -i ~/hserv.pem ./* roguh@10.12.1.17:/var/www/html
+          scp -r -o StrictHostKeyChecking=no -i ~/hserv.pem ./* roguh@10.12.1.61:/var/www/html
