@@ -3,7 +3,7 @@ name: Deploy to EC2
 on:
   push:
     branches:
-      - main
+      - Prod
 
 jobs:
   deploy:
@@ -20,10 +20,4 @@ jobs:
 
       - name: Copy files to EC2
         run: |
-          scp -r -o StrictHostKeyChecking=no ./* ec2-user@18.175.25.162:/var/www/html/
-
-      - name: Restart Web Server
-        run: |
-          ssh -o StrictHostKeyChecking=no ec2-user@your-ec2-ip 'sudo systemctl restart apache2'
-
-
+          scp -r -o StrictHostKeyChecking=no -i ~/nodeapp.pem ./* ec2-user@18.175.25.162:/var/www/html
